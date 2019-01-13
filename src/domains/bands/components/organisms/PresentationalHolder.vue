@@ -1,0 +1,42 @@
+<template>
+  <vs-row :class="`vs-lg ${$options.name}`">
+    <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
+      <h1 class="primary"> Kitchen Doors </h1>
+    </vs-col>
+      <vs-col class="search" vs-offset="2" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
+        <search-bar
+          placeHolder="Search your favorite band"
+          @input="input"/>
+      </vs-col>
+      <vs-col class="search" vs-offset="2" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
+        <band-tabs :bands="bands"/>
+      </vs-col>
+  </vs-row>
+</template>
+
+<script>
+import events from '@/mixin/events'
+import SearchBar from '@/domains/shared/SearchBar'
+import BandTabs from '../molecules/BandTabs'
+export default {
+  name: 'PresentationalHolder',
+  extends: events,
+  components: {
+    SearchBar,
+    BandTabs
+  },
+  props: {
+    bands: {
+      type: Object,
+      default: () => ({})
+    }
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+.PresentationalHolder
+  margin-top 20vh
+.search
+  margin-top 5vh
+</style>
