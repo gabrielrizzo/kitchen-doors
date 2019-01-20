@@ -1,14 +1,30 @@
 <template>
   <vs-row :class="`vs-lg ${$options.name}`">
-    <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
+    <vs-col
+      vs-type="flex"
+      vs-justify="center"
+      vs-align="center"
+      vs-w="12">
       <h1 class="primary"> Kitchen Doors </h1>
     </vs-col>
-      <vs-col class="search" vs-offset="2" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
+      <vs-col
+        class="search"
+        vs-offset="2"
+        vs-type="flex"
+        vs-justify="center"
+        vs-align="center"
+        vs-w="8">
         <search-bar
           placeHolder="Search your favorite band"
           @input="input"/>
       </vs-col>
-      <vs-col class="search" vs-offset="2" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
+      <vs-col
+        class="search"
+        vs-offset="3"
+        vs-type="flex"
+        vs-justify="center"
+        vs-align="center"
+        vs-w="6">
         <band-tabs :bands="bands"/>
       </vs-col>
   </vs-row>

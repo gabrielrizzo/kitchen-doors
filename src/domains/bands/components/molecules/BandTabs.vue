@@ -1,7 +1,10 @@
 <template>
   <div>
-    <vs-tabs>
-     <vs-tab v-for= "(band, index) in bands" :vs-label="band.name" :key="index">
+    <vs-tabs vs-align="center">
+     <vs-tab
+      v-for= "(band, index) in bands"
+      :vs-label="band.name"
+      :key="index">
        <div>
          <g-card
           v-for="(value, index) in band.values"
