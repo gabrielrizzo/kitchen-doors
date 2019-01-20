@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { slugCreator } from '@/helpers'
 import BandTabs from '../molecules/BandTabs'
 export default {
   name: 'BandCardContainer',
@@ -19,10 +20,12 @@ export default {
   },
   methods: {
     redirectToDetails ($event) {
+      let slug = slugCreator($event.band)
       this.$router.push({
         name: 'BandDetails',
         params: {
-          band: $event
+          band: $event,
+          slug: slug
         }
       })
     }

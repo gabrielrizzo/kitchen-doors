@@ -5,7 +5,7 @@ export const bands = [
     component: () => import('../pages/Home')
   },
   {
-    path: '/band/',
+    path: '/band/:slug',
     name: 'BandDetails',
     component: () => import('../pages/Details'),
     props: true
