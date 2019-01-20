@@ -3,7 +3,7 @@
     <vs-tabs vs-align="center">
      <vs-tab
       v-for= "(band, index) in bands"
-      :vs-label="band.name"
+      :vs-label="band.label"
       :key="index">
        <div>
          <g-card
