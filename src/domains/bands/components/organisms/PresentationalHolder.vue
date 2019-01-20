@@ -25,7 +25,7 @@
         vs-justify="center"
         vs-align="center"
         vs-w="6">
-        <band-tabs :bands="bands"/>
+        <band-card-container :bands="bands"/>
       </vs-col>
   </vs-row>
 </template>
@@ -33,13 +33,13 @@
 <script>
 import events from '@/mixin/events'
 import SearchBar from '@/domains/shared/SearchBar'
-import BandTabs from '../molecules/BandTabs'
+import BandCardContainer from './BandCardContainer'
 export default {
   name: 'PresentationalHolder',
   extends: events,
   components: {
     SearchBar,
-    BandTabs
+    BandCardContainer
   },
   props: {
     bands: {

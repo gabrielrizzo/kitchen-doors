@@ -1,12 +1,18 @@
 <template>
-  <vs-card actionable class="cardx">
-        <div slot="header">
+  <vs-card
+    actionable
+    class="cardx">
+        <div
+          @click="click"
+          slot="header">
           <h3>
             <slot name="headerContent"/>
           </h3>
         </div>
-        <div slot="media">
-          <img :src="src">
+        <div
+          @click="click"
+          slot="media">
+          <img :src="band.src">
         </div>
         <div>
           <span>
@@ -27,9 +33,14 @@
 export default {
   name: 'GCard',
   props: {
-    src: {
-      type: String,
-      default: 'static/AM.jpg'
+    band: {
+      type: Object,
+      default: () => ({})
+    }
+  },
+  methods: {
+    click ($event) {
+      this.$emit('click', this.band)
     }
   }
 }

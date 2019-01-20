@@ -9,7 +9,8 @@
          <g-card
           v-for="(value, index) in band.values"
           :key="index + value"
-          :src="value.src">
+          :band="value"
+          @click="click">
             <template slot="headerContent">
               {{ value.band }}
             </template>
@@ -32,6 +33,11 @@ export default {
     bands: {
       type: Object,
       default: () => ({})
+    }
+  },
+  methods: {
+    click ($event) {
+      this.$emit('click', $event)
     }
   }
 }
