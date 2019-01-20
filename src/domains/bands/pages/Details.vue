@@ -1,10 +1,14 @@
 <template>
-  <h1> {{ band }} </h1>
+  <details-holder :band="band"/>
 </template>
 
 <script>
+import DetailsHolder from '../components/organisms/presentational/DetailsHolder'
 export default {
   name: 'DetailsContainer',
+  components: {
+    DetailsHolder
+  },
   props: {
     band: {
       type: Object,
