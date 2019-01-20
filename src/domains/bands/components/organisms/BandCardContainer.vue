@@ -1,5 +1,7 @@
 <template>
-  <band-tabs :bands="bands"/>
+  <band-tabs
+  @click="redirectToDetails"
+  :bands="bands"/>
 </template>
 
 <script>
@@ -13,6 +15,16 @@ export default {
     bands: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    redirectToDetails ($event) {
+      this.$router.push({
+        name: 'BandDetails',
+        params: {
+          band: $event
+        }
+      })
     }
   }
 }
