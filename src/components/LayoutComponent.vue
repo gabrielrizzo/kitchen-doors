@@ -22,6 +22,9 @@ h1
   color #ffff
   text-align center
 .banner
+  -webkit-box-shadow -1px 7px 13px -4px rgba(0,0,0,0.66)
+  -moz-box-shadow -1px 7px 13px -4px rgba(0,0,0,0.66)
+  box-shadow -1px 7px 13px -4px rgba(0,0,0,0.66)
   background-color #000000
   height 7vh
 </style>

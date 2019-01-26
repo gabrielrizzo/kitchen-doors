@@ -8,7 +8,7 @@
         vs-align="center"
         vs-w="8">
         <search-bar
-          placeHolder="Search your favorite band"
+          placeHolder="Search your favorite band..."
           @input="input"/>
       </vs-col>
       <vs-col
