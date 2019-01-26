@@ -1,12 +1,5 @@
 <template>
   <vs-row :class="`vs-lg ${$options.name}`">
-    <vs-col
-      vs-type="flex"
-      vs-justify="center"
-      vs-align="center"
-      vs-w="12">
-      <h1 class="primary"> Kitchen Doors </h1>
-    </vs-col>
       <vs-col
         class="search"
         vs-offset="2"
@@ -52,7 +45,8 @@ export default {
 
 <style lang="stylus" scoped>
 .PresentationalHolder
-  margin-top 20vh
+  -webkit-overflow-scrolling touch;
+  margin-top 10vh
 .search
   margin-top 5vh
 </style>

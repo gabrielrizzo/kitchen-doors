@@ -12,7 +12,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Alex Brush', Roboto, cursive;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
 }

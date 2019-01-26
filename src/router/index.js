@@ -6,6 +6,12 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    ...bands
+    {
+      path: '/',
+      component: () => import('../components/LayoutComponent'),
+      children: [
+        ...bands
+      ]
+    }
   ]
 })
