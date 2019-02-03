@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     click ($event) {
-      alert('oi')
+      this.$emit('click', $event)
     }
   }
 }
@@ -31,13 +31,15 @@ export default {
   cursor pointer
   text-align center
   font-family Helvetica
-  font-size 0.6 rem
+  font-size 0.8 rem
   color #b61aff
   border 1.5px
   border-style solid
   border-color #b61aff
   border-radius 15px
   background-color #fdfdfd
+  min-height 10vh
+  min-width 15vw
 .button-card-purple:hover
   transform scale(0.9)
   color #570080

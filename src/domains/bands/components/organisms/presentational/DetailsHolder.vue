@@ -7,24 +7,39 @@
       <img :src="band.src">
     </div>
     <div class="button-card">
-      <g-card-button class="button"/>
-      <g-card-button class="button"/>
-      <g-card-button class="button"/>
+      <component-selector-buttons
+        @click="renderComponent"
+        :actions="actions"/>
     </div>
+    <component :is="component"/>
   </div>
 </template>
 
 <script>
-import GCardButton from '@/domains/shared/GCardButton'
+import Schedule from '../../molecules/Schedule'
+import ComponentSelectorButtons from '../../molecules/ComponentSelectorButtons'
 export default {
   name: 'DetailsHolder',
   components: {
-    GCardButton
+    ComponentSelectorButtons,
+    Schedule
   },
+  data: () => ({
+    component: ''
+  }),
   props: {
     band: {
       type: Object,
       default: () => ({})
+    },
+    actions: {
+      type: Array,
+      required: true
+    }
+  },
+  methods: {
+    renderComponent ($event) {
+      this.component = $event
     }
   }
 }

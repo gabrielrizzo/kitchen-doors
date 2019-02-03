@@ -1,5 +1,7 @@
 <template>
-  <details-holder :band="band"/>
+  <details-holder
+    :band="band"
+    :actions="['Schedule', 'Discography']"/>
 </template>
 
 <script>
